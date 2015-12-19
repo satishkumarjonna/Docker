@@ -12,6 +12,7 @@ dejavu-serif-fonts \
 xdotool && yum clean all
 
 # Add the xstartup file into the image and set the default password.
+RUN date > /tmp/date
 RUN mkdir /root/.vnc
 ADD ./xstartup /root/.vnc/
 RUN chmod -v +x /root/.vnc/xstartup
